@@ -1,0 +1,971 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif; /* Menggunakan font Poppins */
+  background-image: url(../assets/pattern.jpg);
+}
+
+/* Navbar */
+/* Navbar */
+nav {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fixed-navbar {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s; /* Efek transisi smooth */
+}
+
+.transparent {
+  display: flex;
+  background-color: transparent;
+  color: white;
+}
+
+.white-bg {
+  display: flex;
+  background-color: white;
+  color: #1a85ff;
+}
+
+.navbar-icon {
+  margin-right: 30px; /* Atur margin kanan untuk navbar-icon */
+}
+
+.nav-links li a {
+  display: flex;
+  color: white; /* Atur warna font link menjadi putih secara default */
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s ease; /* Tambahkan transisi untuk efek smooth */
+  letter-spacing: 1px;
+}
+
+.fixed-navbar .navbar-brand a:hover {
+  background: linear-gradient(to right, #ffffff, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+.fixed-navbar.white-bg .navbar-brand a {
+  color: black; /* Atur warna font link menjadi hitam saat kondisi white-bg */
+}
+
+.fixed-navbar.white-bg .navbar-brand a:hover {
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+.fixed-navbar.white-bg .nav-links li a {
+  color: black; /* Atur warna font link menjadi hitam saat kondisi white-bg */
+}
+
+.fixed-navbar.white-bg .nav-links li a:hover {
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family: Calibri;
+  font-weight: 700;
+}
+
+.navbar-brand a {
+  margin-left: 100px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navbar-brand span {
+  color: #1a85ff;
+}
+
+.navbar-brand img {
+  margin-right: 5px; /* Membuat sedikit jarak antara gambar dan teks */
+}
+
+.nav-links {
+  list-style-type: none;
+  margin-right: 100px;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin-left: 20px; /* Spasi antar link */
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+/* Carousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Lebar 100% untuk setiap slide */
+  position: relative;
+}
+
+.carousel-item span {
+  color: #1a85ff;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.2); /* Menurunkan kecerahan gambar */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 20px;
+  max-width: 80%;
+  text-align: center;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.carousel-caption h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  animation: fadeInRight 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  line-height: 1.5;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border: none;
+  background-color: transparent !important;
+  cursor: pointer;
+  color: gray;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: #1a85ff;
+}
+
+/* Box content */
+.box-content {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Menengahkan secara vertical */
+  justify-content: center; /* Menengahkan secara horizontal */
+  text-align: center; /* Untuk text align center */
+  width: 90%; /* Lebar 80% */
+  margin: 0 auto; /* Center box content */
+  opacity: 1; /* Atur opacity ke 0 */
+  transition: opacity 2s ease; /* Terapkan transisi */
+}
+
+.box-content.fadeIn {
+  opacity: 1;
+}
+
+div.box-content {
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Menengahkan secara vertical */
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.fadeIn {
+  opacity: 1;
+  animation: fadeInAnimation 1s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.slide:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon {
+  margin-top: 20px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  animation: fadeInTop 1s ease forwards;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+  animation: fadeInTop 1s ease forwards;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  animation: fadeInTop 1s ease forwards;
+}
+
+/* Facility Cards */
+.facility-cards {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid black;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Tambahkan transition untuk efek smooth */
+}
+
+.card:hover .card-img {
+  filter: blur(5px); /* Atur blur pada gambar saat hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna lapisan dengan opacity */
+  opacity: 0; /* Awalnya lapisan tidak terlihat */
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.overlay:hover {
+  opacity: 1; /* Tampilkan lapisan saat hover */
+}
+
+.caption {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.caption h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.caption p {
+  margin: 0;
+  color: white;
+}
+
+.card h4 {
+  position: absolute;
+  width: 190px;
+  text-align: center;
+  bottom: -10px; /* Menentukan jarak judul dari bawah card */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  height: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover h4 {
+  opacity: 0; /* Sembunyikan judul saat card dihover */
+}
+
+/* about-jumbotron */
+.about-jumbotron {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.jumbotron-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar gambar background mengisi seluruh area jumbotron */
+  z-index: -1; /* Meletakkan gambar background di belakang caption */
+  filter: brightness(0.3) contrast(1.2);
+}
+
+.container {
+  position: relative; /* Untuk membuat konten jumbotron terletak di atas gambar background */
+  display: flex;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+  height: 100%;
+}
+
+.jumbotron-content {
+  text-align: center;
+  color: white; /* Warna teks */
+  width: 500px;
+}
+
+.jumbotron-content p {
+  font-size: 36px;
+  font-weight: 300; /* Ukuran teks caption */
+  color: white;
+  letter-spacing: 2px;
+}
+
+.jumbotron-content span {
+  font-weight: 500;
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+.jumbotron-content a {
+  display: inline-block;
+  margin-top: 20px; /* Jarak antara teks caption dan tombol */
+  padding: 10px 20px;
+  background-color: #1a85ff; /* Warna latar tombol */
+  color: white; /* Warna teks tombol */
+  text-decoration: none;
+}
+
+.about-jumbotron .jumbotron-content .btn {
+  background-color: transparent; /* Background transparan */
+  border: 2px solid white; /* Border putih */
+  color: white; /* Warna teks putih */
+  padding: 10px 20px; /* Padding untuk menjaga jarak antara teks dan border */
+
+  /* Transisi saat hover */
+  transition: background 1s;
+}
+
+/* Efek hover */
+.about-jumbotron .jumbotron-content .btn:hover {
+  background: linear-gradient(
+    to bottom,
+    #1a85ff,
+    #ff0342
+  ); /* Gradient background */
+}
+
+/* info */
+
+.about-better {
+  margin: -40px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Menengahkan konten secara horizontal */
+  width: 60%;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Menengahkan konten secara vertical di dalam kolom */
+}
+
+.column img {
+  width: 70px; /* Lebar gambar ikon */
+  height: 70px; /* Tinggi gambar ikon */
+  margin-right: 10px; /* Menambahkan jarak di kanan gambar */
+}
+
+.column .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.column h4,
+p {
+  margin: 0; /* Menghapus margin bawaan */
+}
+
+.column h4 {
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+  letter-spacing: 1px;
+}
+
+.column p {
+  font-size: 12px;
+  color: black;
+}
+
+/* about content */
+.about-content-section {
+  padding: 50px 0; /* Padding atas dan bawah */
+  height: 100vh; /* Tinggi 100vh */
+  display: flex; /* Menggunakan flexbox untuk menengahkan secara vertikal dan horizontal */
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+}
+
+.about-container {
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  display: flex; /* Menggunakan flexbox untuk membuat dua kolom */
+  justify-content: center; /* Pusatkan kolom secara horizontal */
+  align-items: center; /* Pusatkan kolom secara vertikal */
+}
+
+.about-column {
+  flex: 1; /* Agar kolom memiliki ukuran yang sama */
+  padding: 0 20px; /* Padding kiri dan kanan */
+}
+
+.about-gambar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 400px; /* Lebar gambar */
+  height: 300px; /* Tinggi gambar */
+  display: block; /* Agar gambar menjadi elemen blok */
+  margin: 0 auto; /* Pusatkan gambar secara horizontal */
+}
+
+.about-column h2 {
+  font-weight: 300;
+  font-size: 24px; /* Ukuran font judul */
+  margin-bottom: 20px; /* Margin bawah untuk memberi ruang antara judul dan deskripsi */
+}
+
+.about-column span {
+  font-weight: bold; /* Teks bold untuk span dalam judul */
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+.about-column p {
+  color: black;
+}
+
+.sec-1,
+.sec-2 .animated {
+  transition: 1s;
+  filter: blur(5px);
+  opacity: 0;
+}
+
+.sec-1.show-animate .animated {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sec-2.show-animate .animated {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sec-1,
+.sec-2 .animated {
+  transform: translateX(-80%);
+}
+
+.sec-1.show-animate .animated {
+  transform: translateX(0);
+}
+
+.sec-2.show-animate .animated {
+  transform: translateX(0);
+}
+
+/* produk section */
+.produk-section .container {
+  margin: 150px auto;
+  border-radius: 20px;
+  width: 85%;
+  padding: 20px;
+  background-color: white;
+}
+
+.produk-section .row {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.produk-section .col {
+  width: calc(14.28% - 50px); /* 100% / 7 - margin */
+  cursor: pointer;
+  margin: auto 20px;
+}
+.produk-section .col img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+}
+.produk-section .col p {
+  text-align: left;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.produk-section .col p:hover {
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+/* facility content */
+/* Styling for facility section */
+.facility-section .container {
+  width: 80%; /* Menetapkan lebar container menjadi 80% */
+  margin: 0 auto; /* Pusatkan container secara horizontal */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facility-section {
+  padding: 50px 0;
+}
+
+/* Styling for container within facility section */
+.facility-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 100px;
+}
+
+/* Styling for facility column */
+
+.facility-column {
+  flex: 1;
+}
+
+.facility-column img {
+  width: 450px;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+/* Styling for facility content */
+.facility-content {
+  text-align: left;
+}
+
+/* Styling for facility content h2 */
+.facility-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+/* Styling for facility content p */
+.facility-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+}
+
+/* Styling for facility content ul */
+.facility-content ul {
+  margin-left: 10px;
+  padding: 0;
+}
+
+/* Styling for facility content li */
+.facility-content li {
+  margin-bottom: 10px;
+}
+
+/* partner polio */
+.partner-polio {
+  background-color: #f9f9f9; /* Warna latar belakang */
+  padding: 50px 0; /* Padding atas dan bawah */
+}
+
+.container {
+  max-width: 1200px; /* Lebar maksimum */
+  margin: 0 auto; /* Pusatkan konten di tengah */
+}
+
+.main-row {
+  display: flex; /* Gunakan flexbox */
+  align-items: center; /* Pusatkan vertikal */
+  justify-content: space-between; /* Ratakan antara elemen */
+}
+
+.col {
+  flex: 1; /* Setiap kolom mengisi ruang yang sama */
+}
+
+h1 {
+  font-size: 36px; /* Ukuran judul */
+  margin-bottom: 20px; /* Margin bawah */
+}
+
+p {
+  font-size: 16px; /* Ukuran teks deskripsi */
+}
+
+.products-row {
+  display: flex; /* Gunakan flexbox */
+  margin-top: 100px;
+}
+
+.products-row .product {
+  flex: 1; /* Setiap produk mengisi ruang yang sama */
+  text-align: center; /* Pusatkan teks horizontal */
+  padding: 20px; /* Padding antar produk */
+}
+
+.products-row .product img {
+  width: 100px; /* Lebar gambar */
+  height: 100px; /* Tinggi gambar */
+  object-fit: cover;
+  margin: auto;
+}
+
+/* contact-section */
+.contact-section .container {
+  width: 80%;
+  background-color: white;
+  border-radius: 20px;
+  margin: 150px auto;
+}
+
+.contact-section .container .main-row {
+  width: 100%;
+}
+
+.main-row img {
+  height: 400px;
+  margin-left: 60px;
+}
+
+.main-row h2 {
+  font-size: 32px;
+}
+
+.main-row h2 span {
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+.main-row p {
+  color: black;
+}
+
+/* Footer */
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-weight: bold;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px; /* Tambahkan padding agar navbar terlihat lebih rapi */
+  }
+
+  .navbar-brand {
+    margin-left: -90px; /* Atur margin kiri untuk navbar-brand */
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px; /* Sesuaikan dengan tinggi navbar */
+    left: 0;
+    width: 100%; /* Set lebar menjadi 100% */
+    background-color: transparent;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Tambahkan justify-content untuk memusatkan vertikal */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* carousel */
+
+  .carousel {
+    height: 100vh; /* Atur tinggi carousel menjadi 100vh */
+  }
+
+  .carousel-slide img {
+    height: 100vh; /* Atur tinggi gambar pada carousel menjadi 100vh */
+    width: auto; /* Pastikan lebar gambar disesuaikan secara proporsional */
+    object-fit: cover; /* Menjamin bahwa gambar akan mengisi area dengan rasio aspek yang benar */
+  }
+
+  .carousel-container {
+    width: 100%; /* Set lebar carousel container menjadi 100% pada layar 768px */
+    display: flex;
+    align-items: center; /* Pusatkan secara vertikal */
+    justify-content: center; /* Pusatkan secara horizontal */
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 50%; /* Pusatkan secara vertikal */
+    left: 50%; /* Pusatkan secara horizontal */
+    transform: translate(-50%, -50%); /* Pusatkan ke tengah */
+  }
+}
+
+/* Styling untuk layar besar */
+@media screen and (min-width: 769px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-left: 20px; /* Beri jarak antara link */
+  }
+
+  .navbar-icon {
+    display: none; /* Sembunyikan ikon hamburger */
+  }
+}

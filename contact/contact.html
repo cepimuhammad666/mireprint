@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- data aos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <title>Mireprincoll</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../assets/brand.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="fixed-navbar transparent">
+        <div class="navbar-brand">
+          <a href="/index.html">
+            <img src="../assets/brand.png" alt="brand" width="40" />
+            Mireprin<span>coll</span>
+          </a>
+          <!-- Navbar Brand -->
+        </div>
+        <ul class="nav-links">
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/produk/produk.html">Our Product</a></li>
+          <li><a href="/facility/facility.html">Facility</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="navbar-icon">
+          <!-- Icon (misalnya, ikon hamburger) -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path
+              fill="currentColor"
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Carousel -->
+    <section class="about-jumbotron">
+      <div class="jumbotron-background">
+        <!-- Gambar background jumbotron -->
+        <img src="../assets/carousel/image1.jpg" alt="Jumbotron Background" />
+      </div>
+      <div class="container">
+        <div class="jumbotron-content">
+          <!-- Caption jumbotron -->
+          <p>
+            get work done <span>faster</span> and <span>better</span> with us
+          </p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="about-better">
+      <!-- Kolom pertama -->
+      <div class="column" data-aos="fade-down" data-aos-delay="100">
+        <img src="../assets/teknologi.png" alt="Icon 1" />
+        <div class="text">
+          <h4>TECHNOLOGY</h4>
+          <p>Teknologi mutakhir dan kualitas.</p>
+        </div>
+      </div>
+
+      <!-- Kolom kedua -->
+      <div class="column" data-aos="fade-down" data-aos-delay="200">
+        <img src="../assets/presisi.png" alt="Icon 2" />
+        <div class="text">
+          <h4>PRECISION</h4>
+          <p>Precision-driven excellence printing</p>
+        </div>
+      </div>
+
+      <!-- Kolom ketiga -->
+      <div class="column" data-aos="fade-down" data-aos-delay="300">
+        <img src="../assets/quality.png" alt="Icon 3" />
+        <div class="text">
+          <h4>QUALITY</h4>
+          <p>Cuttin-edge precision and quality</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Box content -->
+    <section class="contact-section">
+      <div class="container">
+        <!-- Baris utama menggunakan flexbox -->
+        <div class="main-row">
+          <!-- Column pertama dengan gambar -->
+          <div class="col">
+            <img
+              src="../assets/brand.jpg"
+              alt="Gambar"
+              class="gambar"
+              data-aos="fade-right"
+            />
+          </div>
+          <!-- Column kedua dengan judul dan deskripsi -->
+          <div class="col">
+            <h2 data-aos="fade-left">
+              WE <span>WANT</span> TO <span>HEAR</span> FROM <span>YOU</span>
+            </h2>
+            <p>Jalan Raya Perancis Kosambi, Tangerang, Banten, Indonesia</p>
+            <p>(021) 5591 0334</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="row">
+        <div class="brand">
+          <img src="../assets/icon.png" alt="Brand Logo" class="brand-icon" />
+          <span class="brand-name">Mireprincoll</span>
+        </div>
+      </div>
+      <div class="row">
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Facility</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <p class="copyright">
+          © 2024 Cepi Muhammad Lutfi. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <!-- aos script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
