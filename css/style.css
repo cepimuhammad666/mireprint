@@ -834,8 +834,8 @@ p {
 }
 
 .products-row .product img {
-  width: 100px; /* Lebar gambar */
-  height: 100px; /* Tinggi gambar */
+  width: 170px; /* Lebar gambar */
+  height: 170px; /* Tinggi gambar */
   object-fit: cover;
   margin: auto;
 }
