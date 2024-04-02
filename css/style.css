@@ -802,6 +802,7 @@ p {
 /* contact-section */
 .contact-section .container {
   width: 80%;
+  padding: 40px;
   background-color: white;
   border-radius: 20px;
   margin: 150px auto;
@@ -812,7 +813,7 @@ p {
 }
 
 .main-row img {
-  height: 400px;
+  height: 250px;
   margin-left: 60px;
 }
 
