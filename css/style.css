@@ -585,7 +585,7 @@ section.knowledge {
 
 section.teknologi {
   width: 82%;
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 40px;
   background-color: white;
   border-radius: 20px;
@@ -604,7 +604,7 @@ section.teknologi {
 
 .about-content-section {
   padding: 50px 0; /* Padding atas dan bawah */
-  height: 100vh; /* Tinggi 100vh */
+  height: 80vh; /* Tinggi 100vh */
   display: flex; /* Menggunakan flexbox untuk menengahkan secara vertikal dan horizontal */
   justify-content: center; /* Pusatkan secara horizontal */
   align-items: center; /* Pusatkan secara vertikal */
@@ -637,7 +637,7 @@ section.teknologi {
   font-weight: 300;
   font-size: 24px; /* Ukuran font judul */
   margin-bottom: 20px; /* Margin bawah untuk memberi ruang antara judul dan deskripsi */
-  word-spacing: -3px;
+  word-spacing: -2px;
 }
 
 .about-column span {
