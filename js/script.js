@@ -90,7 +90,7 @@ function autoSlide() {
 
 // Fungsi untuk memulai otomatis slide
 function startAutoSlide() {
-  slideInterval = setInterval(autoSlide, 4000);
+  slideInterval = setInterval(autoSlide, 7000);
 }
 
 // Fungsi untuk menghentikan otomatis slide

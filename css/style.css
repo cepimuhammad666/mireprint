@@ -134,7 +134,7 @@ nav {
 
 .carousel-slide {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 2s ease;
 }
 
 .carousel-item {
@@ -150,7 +150,7 @@ nav {
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(0.2); /* Menurunkan kecerahan gambar */
+  filter: brightness(0.5); /* Menurunkan kecerahan gambar */
 }
 
 .carousel-caption {
@@ -472,7 +472,7 @@ p {
 .jumbotron-content {
   text-align: center;
   color: white; /* Warna teks */
-  width: 500px;
+  width: 700px;
 }
 
 .jumbotron-content p {
@@ -637,6 +637,7 @@ section.teknologi {
   font-weight: 300;
   font-size: 24px; /* Ukuran font judul */
   margin-bottom: 20px; /* Margin bawah untuk memberi ruang antara judul dan deskripsi */
+  word-spacing: -3px;
 }
 
 .about-column span {
@@ -685,7 +686,7 @@ section.teknologi {
 
 /* produk section */
 .produk-section .container {
-  margin: 150px auto;
+  margin: 100px auto;
   border-radius: 20px;
   width: 85%;
   padding: 20px;
@@ -704,8 +705,8 @@ section.teknologi {
   margin: auto 20px;
 }
 .produk-section .col img {
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
 }
 .produk-section .col p {
