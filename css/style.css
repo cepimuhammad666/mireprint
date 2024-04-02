@@ -164,6 +164,11 @@ nav {
   text-align: center;
 }
 
+.carousel-caption h2 {
+  font-family: calibri;
+  text-transform: capitalize;
+}
+
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -562,6 +567,41 @@ p {
 }
 
 /* about content */
+section.knowledge {
+  width: 82%;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.knowledge h1 span {
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
+section.teknologi {
+  width: 82%;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.teknologi {
+  text-align: center;
+}
+
+.teknologi h1 span {
+  background: linear-gradient(to right, #ff0342, #1a85ff); /* Warna gradien */
+  -webkit-background-clip: text; /* Efek gradien pada teks */
+  color: transparent; /* Warna teks menjadi transparan */
+  text-fill-color: transparent; /* Warna teks menjadi transparan */
+}
+
 .about-content-section {
   padding: 50px 0; /* Padding atas dan bawah */
   height: 100vh; /* Tinggi 100vh */
