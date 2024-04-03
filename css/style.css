@@ -100,6 +100,13 @@ nav {
 
 .navbar-brand img {
   margin-right: 5px; /* Membuat sedikit jarak antara gambar dan teks */
+  width: 50px;
+  margin-top: -10px;
+  filter: brightness(50);
+}
+
+.white-bg img {
+  filter: brightness(1);
 }
 
 .nav-links {
@@ -362,6 +369,8 @@ p {
 
 /* Facility Cards */
 .facility-cards {
+  width: 90%;
+  margin: auto;
   height: 100vh;
   display: flex;
   justify-content: space-around;
@@ -475,8 +484,12 @@ p {
   width: 700px;
 }
 
-.jumbotron-content p {
+.jumbotron-content h2 {
   font-size: 36px;
+}
+
+.jumbotron-content p {
+  font-size: 24px;
   font-weight: 300; /* Ukuran teks caption */
   color: white;
   letter-spacing: 2px;
@@ -585,7 +598,7 @@ section.knowledge {
 
 section.teknologi {
   width: 82%;
-  margin: 0 auto;
+  margin: -50px auto;
   padding: 40px;
   background-color: white;
   border-radius: 20px;
@@ -834,10 +847,10 @@ p {
 }
 
 .products-row .product img {
-  width: 160px; /* Lebar gambar */
-  height: 160px; /* Tinggi gambar */
+  width: 200px; /* Lebar gambar */
+  height: 200px; /* Tinggi gambar */
   object-fit: cover;
-  margin: auto;
+  margin: 20px auto;
 }
 
 /* contact-section */
@@ -854,8 +867,9 @@ p {
 }
 
 .main-row img {
-  height: 250px;
-  margin-left: 60px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: 170px;
 }
 
 .main-row h2 {
